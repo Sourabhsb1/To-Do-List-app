@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to-do-list</title>
+    <!-- Link to an external CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="to-do-app">
+            <!-- Main heading with an image -->
+            <h1>To do app <img src="../icon.png"></h1>
+            <div class="input">
+                <!-- Input field for adding tasks -->
+                <input type="text" id="input-box" placeholder="Add your text here"> 
+                <!-- Button to add a task, triggering the 'addTask' function -->
+                <button onclick="addTask()">Add</button> 
+            </div>
+            <!-- Unordered list to display the list of tasks -->
+            <ul id="list-container">
+            </ul> 
+            <!-- Horizontal line to separate the tasks from the count -->
+            <hr> 
+            <div class="tasks">
+                <!-- Display the total number of tasks -->
+                <span id="count">All tasks : 0</span>
+            </div>
+        </div>
+        
+    </div>
+    <!-- Link to an external JavaScript file -->
+    <script src="script.js"></script> 
+</body>
+</html>

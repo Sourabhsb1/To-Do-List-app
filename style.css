@@ -1,0 +1,138 @@
+/* Apply default styling to all elements, reset margin and padding, and set font-family */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'sans-serif';
+    box-sizing: border-box;
+}
+
+/* Style the container that holds the to-do app */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+
+/* Style the to-do app itself, with a white background and rounded borders */
+.to-do-app {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+/* Style the main heading with an image next to it */
+.to-do-app h1 {
+    color: black;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Style the image inside the main heading */
+.to-do-app h1 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+/* Style the input area for adding tasks */
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edeef0;
+    padding-left: 20px;
+    border-bottom: 25px;
+    border-radius: 30px;
+}
+
+/* Style the input box for entering tasks */
+#input-box {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+/* Style the 'Add' button */
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    border-radius: 40px;
+    background-color: #ff5945;
+    cursor: pointer;
+    color: black;
+    font-weight: 700;
+}
+
+/* Style the list items in the to-do list */
+ul li {
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+    font-size: 17px;
+    padding: 19px 8px 12px 50px;
+}
+
+/* Style the checkmark icon for unchecked tasks */
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(../unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+/* Style checked tasks with strikethrough text and a different checkmark icon */
+.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+/* Update the checkmark icon for checked tasks */
+.checked::before {
+    background-image: url(../checked.png);
+}
+
+/* Style the close button for removing tasks */
+#list-container li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+/* Add a hover effect to the close button */
+ul li span:hover {
+    background-color: #edeef0;
+}
+
+/* Style the horizontal line that separates tasks from the count */
+hr {
+    margin-top: 20px;
+}
+
+/* Style the task count display */
+.tasks {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
